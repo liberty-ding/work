@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/angular.min.js"></script>
+</head>
+<body ng-app='myApp'>
+	<div ng-controller='ctr'>
+		<p>姓名为{{info[1] | lowercase}}</p>
+		<p>总价格：{{price | currency}}</p>
+	</div>
+	<div ng-app="" ng-init="quantity=60;cost=5">
+		<p>总价：<span ng-bind="quantity - cost"><span></p>
+	</div>
+	<div ng-app='' ng-init="firstName='Jone';lastName='Doe'">
+		<p>姓名：<span ng-bind="firstName  + lastName "></span></p>
+	</div>
+
+	<script>
+	var myApp=angular.module("myApp",[]);
+	myApp.controller('ctr',function($scope){
+		$scope.price='1256.8594'
+		$scope.name="uoolllll"
+		$scope.info=["aaa","BBbb","cccc"]
+	})
+
+	</script>
+</body>
+</html>
